@@ -6,7 +6,12 @@ namespace InventoryMaintenance
 {
     public class Supply : InvItem
     {
-        public string Manufacturer { get; set; }
+        public string Manufacturer { get; set; } = "";
+
+        // Jonathan Douglas
+        public Supply()
+        {
+        }
 
         // Jonathan Douglas
         public Supply(

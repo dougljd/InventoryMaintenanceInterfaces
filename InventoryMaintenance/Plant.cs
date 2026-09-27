@@ -9,7 +9,12 @@ namespace InventoryMaintenance
     // the properties and methods of the InvItem class using ": InvItem".
     public class Plant : InvItem
     {
-        public string Size { get; set; }
+        public string Size { get; set; } = "";
+
+        // Jonathan Douglas
+        public Plant()
+        {
+        }
 
         // Jonathan Douglas
         public Plant(

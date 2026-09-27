@@ -7,7 +7,9 @@ namespace InventoryMaintenance
     public class InvItem : IDisplayable
     {
         public int ItemNo { get; set; }
-        public string Description { get; set; }
+
+        public string Description { get; set; } = "";
+
         public decimal Price { get; set; }
 
         // Jonathan Douglas
