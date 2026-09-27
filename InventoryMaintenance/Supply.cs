@@ -6,17 +6,23 @@ namespace InventoryMaintenance
 {
     public class Supply : InvItem
     {
-        public Supply() { }
+        public string Manufacturer { get; set; }
 
-        public Supply(int itemNo, string description, decimal price, string manufacturer) :
-            base(itemNo, description, price)
+        // Jonathan Douglas
+        public Supply(
+            int itemNo,
+            string description,
+            decimal price,
+            string manufacturer)
+            : base(itemNo, description, price)
         {
             Manufacturer = manufacturer;
         }
 
-        public string Manufacturer { get; set; }
-
-        public override string GetDisplayText() =>
-            $"{ItemNo}    {Manufacturer} {Description} ({Price:c})";
+        // Jonathan Douglas
+        public override string GetDisplayText()
+        {
+            return $"{ItemNo} {Manufacturer} {Description} ({Price:c})";
+        }
     }
 }
